@@ -26,7 +26,7 @@ export default function SuccessPage() {
         })
         .finally(() => {
           setLoading(false);
-          setTimeout(() => router.push("/dashboard"), 2000);
+          setTimeout(() => router.push("/app/dashboard"), 2000);
         });
     } else {
       setError("No session ID found.");

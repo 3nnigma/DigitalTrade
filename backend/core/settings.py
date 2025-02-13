@@ -83,7 +83,7 @@ DATABASES = {
         'NAME': 'digital_trade_db',
         'USER': 'enigma',
         'PASSWORD': 'enidev',
-        'HOST': 'db',
+        'HOST': 'localhost',
         'PORT': '5432',
     }
 }
@@ -186,7 +186,7 @@ DJOSER = {
     'USER_CREATE_PASSWORD_RETYPE': True,
     'PASSWORD_RESET_CONFIRM_RETYPE': True,
     'TOKEN_MODEL': None,
-    'SOCIAL_AUTH_ALLOWED_REDIRECT_URIS': getenv('REDIRECT_URLS').split(','), # type: ignore
+    'SOCIAL_AUTH_ALLOWED_REDIRECT_URIS': getenv('REDIRECT_URLS').split(','), 
     'SERIALIZERS': {
         'user': 'users.serializers.UserAccountSerializer',  
     }

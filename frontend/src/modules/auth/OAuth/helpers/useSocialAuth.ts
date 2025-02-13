@@ -1,9 +1,9 @@
+import { errorCatch } from "@/api/error";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useRef } from "react";
-import { oauth } from "./oauth.service";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
-import { errorCatch } from "@/api/error";
+import { oauth } from "./oauth.service";
 
 export function useSocialAuth(provider: string) {
   const searchParams = useSearchParams();
@@ -24,7 +24,7 @@ export function useSocialAuth(provider: string) {
         },
       });
 
-      router.push("/");
+      router.push("/app/dashboard");
     },
     onError: (error) => {
       toast("Failed to sign in your account!", {
@@ -34,7 +34,7 @@ export function useSocialAuth(provider: string) {
           onClick: () => {},
         },
       }),
-        router.push("/");
+        router.push("/auth/login");
     },
   });
 

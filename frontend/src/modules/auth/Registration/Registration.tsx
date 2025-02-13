@@ -26,7 +26,7 @@ export default function Registration() {
     mutate(data);
   };
   return (
-    <div className="max-w-md w-full mt-4 mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
+    <div className="max-w-md w-full mt-10 mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-zinc-100 dark:bg-zinc-950">
       <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
         Welcome to DigitalTrade
       </h2>

@@ -30,7 +30,7 @@ export default function PasswordResetConfirm({ params }: Props) {
     mutate({ ...params, ...data });
   };
   return (
-    <div className="max-w-md w-full mx-auto mt-24 rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
+    <div className="max-w-md w-full mx-auto mt-24 rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-zinc-100 dark:bg-zinc-950">
       <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
         Welcome back to DigitalTrade
       </h2>

@@ -4,7 +4,7 @@ import { Suspense } from "react";
 export default function Github() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <GithubAuth />;
+      <GithubAuth />
     </Suspense>
   );
 }

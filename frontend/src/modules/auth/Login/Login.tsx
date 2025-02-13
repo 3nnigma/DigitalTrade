@@ -23,7 +23,7 @@ export default function Login() {
   };
 
   return (
-    <div className="mt-12 max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
+    <div className="mt-24 max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 py-6 md:p-8 md:py-10 shadow-input bg-zinc-100 dark:bg-zinc-950">
       <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
         Welcome back to DigitalTrade
       </h2>

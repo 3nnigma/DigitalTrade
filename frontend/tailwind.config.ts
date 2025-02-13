@@ -26,6 +26,11 @@ const config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        chart1: "hsl(var(--chart-1))",
+        chart2: "hsl(var(--chart-2))",
+        chart3: "hsl(var(--chart-3))",
+        chart4: "hsl(var(--chart-4))",
+        chart5: "hsl(var(--chart-5))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -54,6 +59,7 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        hoverbg: "var(--bg-hover)",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -101,6 +107,10 @@ const config = {
       },
       boxShadow: {
         input: `0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08)`,
+      },
+      backgroundImage: {
+        "section-gradient": "linear-gradient(to bottom, #f8f8fa, #f9f9f9)",
+        "section-gradient-dark": "linear-gradient(to bottom, #232225, #262728)",
       },
     },
   },

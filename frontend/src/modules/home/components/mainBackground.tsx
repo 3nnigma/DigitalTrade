@@ -1,4 +1,4 @@
-import DotPattern from "@/components/common/dotPattern";
+import DotPattern from "../ui/dotPattern";
 import { ButtonGradient } from "@/components/ui/buttonGradient";
 import { cn } from "@/lib/utils";
 import { BookMarked } from "lucide-react";

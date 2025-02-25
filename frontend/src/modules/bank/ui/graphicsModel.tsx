@@ -16,7 +16,7 @@ export default function GlowingImage() {
         ],
         transition: { duration: 4, repeat: Infinity, ease: "linear" }
       }}
-      className="flex justify-center items-center border-l border-r border-[rgba(75,85,99,0.36)] mx-12 my-8"
+      className="flex justify-center items-center border-l border-r border-[rgba(75,85,99,0.36)] mx-12 mb-6"
     >
       <Image
         src="/graphics3d.png"

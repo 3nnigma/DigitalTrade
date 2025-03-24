@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import { OrbitingCirclesDemo } from "./orbitingIcons";
 import { AnimatedBeamMultipleOutputDemo } from "./beamSection";
 import Image from "next/image";
-import { Notification, notifications } from "../ui/notifyBlocks";
+import { InfoBlocks, infoBlocks } from "../ui/notifyBlocks";
 
 export function BlockSections() {
   const features = [
@@ -16,14 +16,14 @@ export function BlockSections() {
         "col-span-1 lg:col-span-4 border-b lg:border-r dark:border-neutral-800",
     },
     {
-      title: "Receive notifications about every transaction",
+      title: "Market Insights and Trands",
       description:
-        "Be aware of all transactions and activities on your accounts. Set up notifications to instantly find out about new transfers, receipts and changes in your assets.",
+        "Access real-time market trends and optimize your portfolio with advanced diversification tools.",
       skeleton: <SkeletonTwo />,
       className: "border-b col-span-1 lg:col-span-2 dark:border-neutral-800",
     },
     {
-      title: "Integration with other services",
+      title: "Use with other services",
       description:
         "Combine your finances with integration with finance services, exchangers, and other applications.",
       skeleton: <SkeletonThree />,
@@ -122,8 +122,8 @@ export const SkeletonThree = () => {
 export const SkeletonTwo = () => {
   return (
     <div className="relative flex flex-col items-start p-1 pt-8 gap-6 h-full overflow-hidden">
-      {notifications.map((item, idx) => (
-        <Notification {...item} key={idx} />
+      {infoBlocks.map((item, idx) => (
+        <InfoBlocks {...item} key={idx} />
       ))}
     </div>
   );
@@ -131,8 +131,8 @@ export const SkeletonTwo = () => {
 
 export const SkeletonFour = () => {
   return (
-    <div className="h-60 md:h-60  flex flex-col items-center relative bg-transparent dark:bg-transparent mt-10">
-      <Image src={"/charts.png"} width={459} height={256} alt="charts" />
+    <div className="h-60  flex flex-col items-center relative bg-transparent dark:bg-transparent ">
+      <Image src={"/3dcharts.png"} width={320} height={320} alt="charts" />
     </div>
   );
 };

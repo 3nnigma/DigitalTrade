@@ -7,7 +7,7 @@ export default function GithubAuth() {
   useSocialAuth("github");
 
   return (
-    <div className="flex h-[85vh] w-full flex-1 flex-col justify-center px-6 lg:px-8">
+    <div className="flex h-full w-full relative flex-1 flex-col justify-center px-6 lg:px-8">
       <div className="flex flex-col justify-center items-center w-full">
         <div className="flex justify-center items-center">
           <h1 className="text-center text-4xl font-bold leading-9 tracking-tight text-gray-900 mr-4 dark:text-gray-100">

@@ -10,6 +10,7 @@ import { API_URL } from "@/lib/config";
 import { useAuthStore } from "@/modules/auth/store";
 import { useMutation } from "@tanstack/react-query";
 import { useRouter as useNavRouter } from "next/navigation";
+import ThemeSwitcherButton from "@/components/ui/themeToggle";
 
 export default function AuthHeader() {
   const pathName = usePathname();
@@ -71,11 +72,12 @@ export default function AuthHeader() {
           </Link>
         </div>
         <div className="ml-4 flex justify-center items-center">
-          <Button variant="default" size="sm" onClick={handleLogout}>
+          {/* <Button variant="default" size="sm" onClick={handleLogout}>
             {" "}
             Log out
             <LogOut size={16} className="ml-2" />
-          </Button>
+          </Button> */}
+          <ThemeSwitcherButton />
         </div>
       </div>
     </div>

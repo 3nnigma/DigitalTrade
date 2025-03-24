@@ -18,7 +18,7 @@ export default function PaymentPage() {
     try {
       const response = await axiosAuth.post(
         `${API_URL}/create-stripe-session/`,
-        { amount: (Number(amount) + (Number(amount)/100*5)).toFixed(2).toString() }
+        { amount: (Number(amount) + (Number(amount)/100*5)).toFixed(2) }
       );
       const { url } = response.data;
       window.location.href = url;
@@ -29,7 +29,7 @@ export default function PaymentPage() {
 
   return (
     <div className="w-full h-screen flex justify-center items-center">
-      <div className="h-1/2 p-8 w-[25%] rounded-xl shadow-inner mx-4 border-[rgba(209, 213, 219, 0.7)] bg-section-gradient dark:bg-section-gradient-dark dark:border-[rgba(255,255,255,0.10)">
+      <div className="h-[58%] p-8 pb-16 pt-14 w-[24%] rounded-xl shadow-inner mx-4 border-[rgba(209, 213, 219, 0.7)] mb-12 bg-section-gradient dark:bg-section-gradient-dark dark:border-[rgba(255,255,255,0.10)">
         <h1 className="w-full items-center justify-between flex text-xl border-[rgba(209, 213, 219, 0.7)]  dark:border-[rgba(255,255,255,0.10)] border-b pb-3">
           <div className="flex items-center">
           <span className="text-lg mr-2 opacity-75">Transaction ID</span>
@@ -39,16 +39,16 @@ export default function PaymentPage() {
           <CircleX className="opacity-75 mr-1"/>
           </Link>
         </h1>
-        <div className="w-[90%] h-80 mt-4 border-[rgba(88,92,98,0.46)] ml-7 bg-[rgba(81,81,90,0.19)] border rounded-lg mb-4">
-          <div className="flex justify-between font-sans  border-[rgba(209, 213, 219, 0.7)]  dark:border-[rgba(255,255,255,0.10)] border-b pb-2 shadow-inner  p-4 items-center">
+        <div className="w-[90%] h-[360px] mt-4 border-[rgba(88,92,98,0.46)] ml-7 bg-[rgba(81,81,90,0.19)] border rounded-lg mb-4">
+          <div className="flex justify-between font-sans text-lg  border-[rgba(209, 213, 219, 0.7)]  dark:border-[rgba(255,255,255,0.10)] border-b pb-3 shadow-inner pt-6 p-4 items-center">
             Total Amount
-            <span className="">${(Number(amount) + (Number(amount)/100*5)).toFixed(2)}</span>
+            <span className="">$ {(Number(amount) + (Number(amount)/100*5)).toFixed(2)}</span>
           </div>
           <div className="p-4">
           <div className="flex px-2 opacity-80 font-sans justify-between items-center">
             Total Fee
             <span>
-              ${(Number(amount)/100 * 5).toFixed(2)}
+              $ {(Number(amount)/100 * 5).toFixed(2)}
             </span>
           </div>
           <div className="rounded-xl w-full flex items-center justify-between h-12 bg-[rgba(81,81,90,0.30)] px-4 my-4">
@@ -72,7 +72,7 @@ export default function PaymentPage() {
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
           />
-          <div className="flex mt-2 items-center">
+          <div className="flex mt-5 items-center">
               {prices.map((price, index) =>
                 <div key={index} className={`rouned-xl cursor-pointer ${index == prices.indexOf(amount) ? 'opacity-100' : 'opacity-60'} mx-1 flex justify-center items-center w-24 h-10 bg-[rgba(81,81,90,0.30)]`} onClick={() => setAmount(prices[index])}>
               ${price}

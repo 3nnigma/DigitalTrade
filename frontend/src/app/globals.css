@@ -137,7 +137,7 @@
     }
 }
 
-.bg-avt {
+html .bg-avt {
     background:
         linear-gradient(rgba(30, 30, 30, 0.5), rgba(30, 30, 30, 0.5))
             padding-box,
@@ -146,14 +146,32 @@
 }
 
 .curved {
-      position: absolute;
-      right: 0%;
-      left: 0%;
-      width: 100%;
-      height: 120px;
-      z-index: 99;
-      background: hsl(var(--background));
-      -webkit-clip-path: ellipse(20% 20% at 50% 0%);
-      clip-path: ellipse(20% 20% at 50% 0%);
+    position: absolute;
+    right: 0%;
+    left: 0%;
+    width: 100%;
+    height: 120px;
+    z-index: 99;
+    background: hsl(var(--background));
+    -webkit-clip-path: ellipse(20% 20% at 50% 0%);
+    clip-path: ellipse(20% 20% at 50% 0%);
+}
 
+.tradingview-widget-container,
+iframe {
+    /* background: red !important; */
+}
+.tv-embed-widget-wrapper__body {
+    border-radius: none !important;
+    border: none !important;
+    background: red;
+}
+
+.mask-gradient {
+    background: linear-gradient(
+        to right,
+        hsl(var(--background)) 20%,
+        transparent 27% 72%,
+        hsl(var(--background)) 81%
+    );
 }

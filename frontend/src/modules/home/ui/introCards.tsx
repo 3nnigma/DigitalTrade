@@ -66,9 +66,8 @@ export const Skeleton = ({ stype }: { stype: "1" | "2" | "3" }) => {
   ];
 
   useEffect(() => {
-    // @ts-ignore
     animate(sequence, {
-      repeat: Infinity,
+      repeat: Infinity, // @ts-ignore
       repeatDelay: 1,
     });
   }, []);

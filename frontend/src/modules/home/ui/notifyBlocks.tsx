@@ -1,79 +1,60 @@
 import { cn } from "@/lib/utils";
+import { BarChart, ChartLine, ChartPie } from "lucide-react";
+import { ReactNode } from "react";
 
 interface Item {
   name: string;
   description: string;
   icon: string;
-  color: string;
-  time: string;
+  symb: ReactNode;
 }
 
-let notifications = [
+const infoBlocks = [
   {
-    name: "Log in to account",
-    description: "DigitalTrade",
-    time: "8m ago",
-    icon: "👥",
-    color: "#8e59f5",
+    name: "Market Overview",
+    description: "Track market trends and insights",
+    icon: "🏦",
+    symb: <ChartPie className="absolute text-indigo-400 bottom-4 right-4" size={20} />,
   },
   {
-    name: "New message",
-    description: "DigitalTrade",
-    time: "15m ago",
-    icon: "💬",
-    color: "#00C9A7",
+    name: "Historical Data",
+    description: "Analyze past trends and performance",
+    icon: "🗓️",
+    symb: <ChartLine className="absolute bottom-4 text-red-300 right-4" size={20} />,
   },
   {
-    name: "Successful payment",
-    description: "DigitalTrade",
-    time: "30m ago",
-    icon: "📑",
-    color: "#e60079",
-  },
-  {
-    name: "Planned actions",
-    description: "DigitalTrade",
-    time: "5m ago",
-    icon: "📅",
-    color: "#1E86FF",
+    name: "Portfolio Diversification",
+    description: "Minimize risks with portfolio analysis",
+    icon: "🗃️",
+    symb: <BarChart className="absolute text-emerald-400 bottom-4 right-4" size={20} />,
   },
 ];
 
-const Notification = ({ name, description, icon, color, time }: Item) => {
+const InfoBlocks = ({ name, description, icon, symb }: Item) => {
   return (
     <figure
       className={cn(
-        "relative mx-auto min-h-fit w-full max-w-[400px] cursor-pointer overflow-hidden rounded-2xl p-3.5",
-        // animation styles
-        "transition-all duration-200 ease-in-out hover:scale-[103%]",
-        // light styles
+        "relative mx-auto min-h-24 w-full max-w-[400px] overflow-hidden rounded-2xl p-3.5",
         "bg-white [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]",
-        // dark styles
-        "transform-gpu dark:bg-transparent dark:backdrop-blur-md dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]",
+        "transform-gpu dark:bg-transparent dark:backdrop-blur-md dark:[border:1px_solid_#308aff24] dark:[box-shadow:0_40px_80px_-10px_#98c1ff29_inset]",
       )}
     >
-      <div className="flex flex-row items-center gap-3">
-        <div
-          className="flex size-10 items-center justify-center rounded-2xl"
-          style={{
-            backgroundColor: color,
-          }}
-        >
+      <div className="flex flex-col pl-2.5 gap-3">
+        <div className="flex size-10 items-center bg-gradient-to-tl from-[#1546d9ba] to-[#acd4ff] justify-center rounded-xl">
           <span className="text-lg">{icon}</span>
         </div>
         <div className="flex flex-col overflow-hidden">
           <figcaption className="flex flex-row items-center whitespace-pre text-lg font-medium dark:text-white ">
             <span className="text-sm sm:text-lg">{name}</span>
-            <span className="mx-1">·</span>
-            <span className="text-xs text-gray-500">{time}</span>
           </figcaption>
-          <p className="text-sm font-normal dark:text-white/60">
+          <p className="text-sm max-w-[60%] font-normal dark:text-white/60">
             {description}
           </p>
         </div>
+        {symb}
       </div>
     </figure>
   );
 };
 
-export { notifications, Notification };
+export { infoBlocks, InfoBlocks };

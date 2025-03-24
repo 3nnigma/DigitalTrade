@@ -4,7 +4,7 @@ import { Input } from "../components/input";
 export const InputContainers = ({ register }: any) => {
   return (
     <>
-      <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
+      <div className="flex flex-col md:flex-row  md:space-x-2 mb-4">
         <LabelInputContainer>
           <Label htmlFor="first_name">First name</Label>
           <Input
@@ -34,7 +34,10 @@ export const InputContainers = ({ register }: any) => {
         />
       </LabelInputContainer>
       <LabelInputContainer className="mb-4">
+        <div className="flex items-center justify-between">
         <Label htmlFor="password">Password</Label>
+        <span className="text-sm text-neutral-400 font-sans cursor-default">At least 8 characters</span>
+        </div>
         <Input
           id="password"
           placeholder="••••••••"

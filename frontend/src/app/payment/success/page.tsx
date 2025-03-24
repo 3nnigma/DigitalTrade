@@ -4,10 +4,12 @@ import { useEffect, useState } from "react";
 import { API_URL } from "@/lib/config";
 import { axiosAuth } from "@/api/interceptors";
 import { useRouter } from "next/navigation";
+import CurrencyTransfer from "@/components/common/paymentSuccess";
 
 export default function SuccessPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [localAmount, setLocalAmount] = useState(0.0);
   const router = useRouter();
 
   useEffect(() => {
@@ -18,15 +20,15 @@ export default function SuccessPage() {
     if (session_id) {
       axiosAuth
         .post(`${API_URL}/check-payment-status/`, { session_id })
-        .then((_response) => {
-          console.log("Payment was successful. User balance updated.");
+        .then((response) => {
+          setLocalAmount(response.data.amount);
         })
         .catch((_error) => {
           setError("Payment verification failed.");
         })
         .finally(() => {
           setLoading(false);
-          setTimeout(() => router.push("/app/dashboard"), 2000);
+          setTimeout(() => router.push("/app/dashboard"), 10000);
         });
     } else {
       setError("No session ID found.");
@@ -37,5 +39,13 @@ export default function SuccessPage() {
   if (loading) return <div>Loading...</div>;
   if (error) return <div>{error}</div>;
 
-  return <div>Payment successful! Your balance has been updated.</div>;
+  return (
+    <div className="w-full h-screen flex justify-center items-center">
+      <CurrencyTransfer
+        amount={(localAmount / 1.05).toFixed(2)}
+        totalFee={(localAmount - localAmount / 1.05).toFixed(2)}
+        totalAmount={localAmount.toFixed(2)}
+      />
+    </div>
+  );
 }

@@ -1,3 +1,4 @@
+"use client"
 import { axiosAuth } from "@/api/interceptors";
 import { API_URL } from "@/lib/config";
 import { useQuery } from "@tanstack/react-query";

@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 const providersData = [
@@ -58,7 +57,6 @@ export default function CardProviders() {
       <div className="flex justify-between px-2 items-center">
         Card Providers
         <span>Count: 4</span>
-        {/* <Button  size="sm">Learn More</Button> */}
       </div>
       {providersData.map((p) => (
         <div

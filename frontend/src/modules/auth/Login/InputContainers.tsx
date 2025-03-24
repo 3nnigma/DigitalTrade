@@ -14,7 +14,7 @@ export const InputContainers = ({ register }: any) => {
           {...register("email", { required: true })}
         />
       </LabelInputContainer>
-      <LabelInputContainer className="mb-4">
+      <LabelInputContainer className="mb-8">
         <div className="flex justify-between">
           <Label htmlFor="password">Password</Label>
           <Link

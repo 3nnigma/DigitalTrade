@@ -43,13 +43,13 @@ class CheckPaymentStatusView(APIView):
             session = stripe.checkout.Session.retrieve(session_id)
 
             if session.payment_status == 'paid':
-                user = request.user 
+                user = request.user
                 amount_paid = session.amount_total / 100  # type: ignore
 
                 user.balance += Decimal(amount_paid)
                 user.save()
 
-                return Response({'message': 'Balance updated successfully'}, status=status.HTTP_200_OK)
+                return Response({'amount': Decimal(amount_paid)}, status=status.HTTP_200_OK)
             else:
                 return Response({'message': 'Payment not successful'}, status=status.HTTP_400_BAD_REQUEST)
 

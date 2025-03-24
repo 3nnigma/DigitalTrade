@@ -5,6 +5,8 @@ import { LabelInputContainer } from "../components/labelInputContainer";
 import { Input } from "../components/input";
 import { Label } from "../components/label";
 import { usePasswordReset } from "./helpers/usePasswordReset";
+import Logo from "@/components/Logo";
+import { motion } from "framer-motion";
 
 interface IReset {
   email: string;
@@ -19,28 +21,64 @@ export default function PasswordReset() {
     mutate(data);
   };
   return (
-    <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 mt-20 md:p-8 shadow-input bg-zinc-100 dark:bg-zinc-950">
-      <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
-        Welcome back to DigitalTrade
-      </h2>
-      <p className="text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300">
-        Change your password to continue working in our service
-      </p>
+    <motion.div
+         initial={{ opacity: 0, y: 30, filter: "blur(8px)" }}
+         animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+         transition={{ duration: 0.8, ease: "easeOut" }}
+         className="max-w-md w-[40%] relative flex flex-col justify-center mx-auto rounded-none md:rounded-2xl h-[92%] p-4 md:p-8"
+       >
+         <motion.h2
+           initial={{ opacity: 0, y: -10 }}
+           animate={{ opacity: 1, y: 0 }}
+           transition={{ duration: 0.6, delay: 0.4 }}
+           className="font-bold text-2xl text-center text-neutral-200"
+         >
+           Confirm Email
+         </motion.h2>
 
-      <form className="my-8" onSubmit={handleSubmit(onSubmit)}>
-        <LabelInputContainer className="mb-8">
-          <Label htmlFor="email">Email Address</Label>
-          <Input
-            id="email"
-            placeholder="example@gmail.com"
-            type="email"
-            {...register("email", { required: true })}
-          />
-        </LabelInputContainer>
-        <ButtonAuth formType="Reset" />
+         <motion.p
+           initial={{ opacity: 0, y: 10 }}
+           animate={{ opacity: 1, y: 0 }}
+           transition={{ duration: 0.6, delay: 0.6 }}
+           className="text-center text-sm max-w-sm mt-2 text-neutral-300"
+         >
+           Enter your email to change your account's password
+         </motion.p>
 
-        <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" />
-      </form>
-    </div>
+         <motion.form
+           initial={{ opacity: 0, y: 15 }}
+           animate={{ opacity: 1, y: 0 }}
+           transition={{ duration: 0.8, delay: 0.8 }}
+           className="my-8"
+           onSubmit={handleSubmit(onSubmit)}
+         >
+           <LabelInputContainer className="mb-8">
+             <Label htmlFor="email">Email Address</Label>
+             <Input
+               id="email"
+               placeholder="example@gmail.com"
+               type="email"
+               {...register("email", { required: true })}
+             />
+           </LabelInputContainer>
+           <ButtonAuth formType="Confirm" />
+         </motion.form>
+
+         <motion.div
+           initial={{ opacity: 0, width: "0%" }}
+           animate={{ opacity: 1, width: "100%" }}
+           transition={{ duration: 0.8, delay: 1 }}
+           className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent mt-4 mb-4 h-[1px] w-full"
+         />
+
+         <motion.div
+           initial={{ opacity: 0, scale: 0.95 }}
+           animate={{ opacity: 1, scale: 1 }}
+           transition={{ duration: 0.6, delay: 1.2 }}
+           className="md:block hidden mx-auto pl-10"
+         >
+           <Logo />
+         </motion.div>
+       </motion.div>
   );
 }

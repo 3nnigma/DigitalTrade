@@ -23,7 +23,7 @@ export default function Sidebar() {
               </Link>
               <div className="flex flex-col border-l mb-5 border-gray-300 h-[90px] dark:border-gray-700 ml-4">
                 {nItem.subItems.map((subItem, index) => (
-                  <div className="flex items-center">
+                  <div key={index} className="flex items-center">
                     <span className="text-gray-300 dark:text-gray-600">⎯</span>
                     <span
                       key={index}

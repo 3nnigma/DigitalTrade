@@ -128,10 +128,10 @@ AUTH_COOKIE_PATH = '/'
 AUTH_COOKIE_HTTP_ONLY = False
 AUTH_COOKIE_SAMESITE = 'Lax'
 
-REFRESH_COOKIE_MAX_AGE = 60 * 60 * 24 * 7  
+REFRESH_COOKIE_MAX_AGE = 60 * 60 * 24 * 7
 
 
-# Social Auth settings  
+# Social Auth settings
 
 AUTHENTICATION_BACKENDS = [
     'social_core.backends.github.GithubOAuth2',
@@ -186,9 +186,9 @@ DJOSER = {
     'USER_CREATE_PASSWORD_RETYPE': True,
     'PASSWORD_RESET_CONFIRM_RETYPE': True,
     'TOKEN_MODEL': None,
-    'SOCIAL_AUTH_ALLOWED_REDIRECT_URIS': getenv('REDIRECT_URLS').split(','), 
+    'SOCIAL_AUTH_ALLOWED_REDIRECT_URIS': getenv('REDIRECT_URLS').split(','),
     'SERIALIZERS': {
-        'user': 'users.serializers.UserAccountSerializer',  
+        'user': 'users.serializers.UserAccountSerializer',
     }
 }
 

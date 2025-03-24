@@ -26,7 +26,7 @@ const stats = [
   },
   {
     title: "Total Income",
-    amount: 14.4,
+    amount: 84.4,
     icon: TrendingUp,
     btn: (
       <Button variant="outline" className="font-sans">
@@ -37,7 +37,7 @@ const stats = [
   },
   {
     title: "Total Expenses",
-    amount: 80.5,
+    amount: 56.5,
     icon: TrendingDown,
     btn: (
       <Button variant="outline" className="font-sans">

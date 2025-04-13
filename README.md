@@ -33,7 +33,7 @@ DigitalTrade is a comprehensive 3-in-1 web application that integrates trading, 
   - PostgreSQL
   - Docker & Docker Compose
 
-## Screenshots
+## Presentation
 
 ### Dashboard
 ![Dashboard](https://github.com/3nnigma/DigitalTrade/blob/main/dashboard.png)

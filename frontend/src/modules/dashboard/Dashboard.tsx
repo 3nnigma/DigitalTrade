@@ -134,9 +134,9 @@ export default function Dashboard() {
           </div>
           <Graphs />
           <div className="mt-2 mb-8">
-            <span>Trending up by 5.2% this month</span>
+            <span>Trending up by 2.5% this month</span>
             <p className="text-sm opacity-60 font-normal mt-1.5">
-              Showing total visitors for the last 6 months
+              Showing total incomes / expenses for the last 6 months
             </p>
           </div>
           <div className="flex justify-center items-center border-[rgba(209, 213, 219, 0.7)] pt-3 border-t dark:border-[#ffffff24]">

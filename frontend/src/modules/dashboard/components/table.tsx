@@ -2,102 +2,116 @@ import {
   Table,
   TableBody,
   TableCell,
-  TableFooter,
   TableHead,
-  TableHeader,
+  TableHeaderCell,
+  TableRoot,
   TableRow,
 } from "@/components/ui/table";
-import { Box, PackageOpen } from "lucide-react";
+import { cn } from "@/lib/utils";
 
-const invoices = [
-  // {
-  //   invoice: "INV001",
-  //   paymentStatus: "Paid",
-  //   totalAmount: "$250.00",
-  //   paymentMethod: "Credit Card",
-  // },
-  {
-    invoice: "INV002",
-    paymentStatus: "Pending",
-    totalAmount: "$150.00",
-    paymentMethod: "PayPal",
-  },
-  {
-    invoice: "INV003",
-    paymentStatus: "Unpaid",
-    totalAmount: "$350.00",
-    paymentMethod: "Bank Transfer",
-  },
-  {
-    invoice: "INV004",
-    paymentStatus: "Paid",
-    totalAmount: "$450.00",
-    paymentMethod: "Credit Card",
-  },
-  {
-    invoice: "INV005",
-    paymentStatus: "Paid",
-    totalAmount: "$550.00",
-    paymentMethod: "PayPal",
-  },
-  {
-    invoice: "INV006",
-    paymentStatus: "Pending",
-    totalAmount: "$200.00",
-    paymentMethod: "Bank Transfer",
-  },
-  {
-    invoice: "INV007",
-    paymentStatus: "Unpaid",
-    totalAmount: "$300.00",
-    paymentMethod: "Credit Card",
-  },
-];
+export function TableExample() {
+  const data: Array<{
+    workspace: string;
+    owner: string;
+    type: string;
+    costs: string;
+    region: string;
+    capacity: string;
+    lastEdited: string;
+  }> = [
+    {
+      workspace: "sales_by_day_api",
+      owner: "John Doe",
+      type: "Finance",
+      costs: "$3,509.00",
+      region: "US-West 1",
+      capacity: "99%",
+      lastEdited: "23/09/2023 13:00",
+    },
+    {
+      workspace: "test_environment",
+      owner: "David Clark",
+      type: "Debt payments",
+      costs: "$800.00",
+      region: "EU-Central 1",
+      capacity: "40%",
+      lastEdited: "25/09/2023 16:20",
+    },
+    {
+      workspace: "marketing_campaign",
+      owner: "Jane Smith",
+      type: "Finance",
+      costs: "$5,720.00",
+      region: "US-East 2",
+      capacity: "80%",
+      lastEdited: "22/09/2023 10:45",
+    },
+    {
+      workspace: "sales_campaign",
+      owner: "Jane Smith",
+      type: "Shopping",
+      costs: "$5,720.00",
+      region: "US-East 2",
+      capacity: "80%",
+      lastEdited: "22/09/2023 10:45",
+    },
+    // {
+    //   workspace: "development_env",
+    //   owner: "Mike Johnson",
+    //   status: "Inactive",
+    //   costs: "$4,200.00",
+    //   region: "EU-West 1",
+    //   capacity: "60%",
+    //   lastEdited: "21/09/2023 14:30",
+    // },
+  ];
 
-export function TableDemo() {
   return (
-    <Table>
-      <TableHeader>
-             <TableRow>
-               <TableHead className="w-[100px]">Invoice</TableHead>
-               <TableHead>Status</TableHead>
-               <TableHead>Method</TableHead>
-               <TableHead className="text-right">Amount</TableHead>
-             </TableRow>
-           </TableHeader>
-      {invoices.length ? (
-        <TableBody>
-          {invoices.map((invoice) => (
-            <TableRow key={invoice.invoice}>
-              <TableCell className="font-medium">{invoice.invoice}</TableCell>
-              <TableCell>{invoice.paymentStatus}</TableCell>
-              <TableCell>{invoice.paymentMethod}</TableCell>
-              <TableCell className="text-right">
-                {invoice.totalAmount}
-              </TableCell>
+    <div className="w-full">
+      <TableRoot className="mt-8 w-full">
+        <Table className="w-full">
+          <TableHead>
+            <TableRow>
+              <TableHeaderCell>Workspace</TableHeaderCell>
+              <TableHeaderCell>Owner</TableHeaderCell>
+              <TableHeaderCell>Status</TableHeaderCell>
+              <TableHeaderCell>Region</TableHeaderCell>
+              <TableHeaderCell>Capacity</TableHeaderCell>
+              <TableHeaderCell className="text-right">Costs</TableHeaderCell>
+              <TableHeaderCell className="text-right">
+                Last edited
+              </TableHeaderCell>
             </TableRow>
-          ))}
-        </TableBody>
-      ) : (
-        <TableRow className="h-48 font-medium   text-lg text-center hover:bg-transparent">
-          <TableCell colSpan={4}>
-            <span className="flex justify-center flex-col text-neutral-400 items-center">
-              <PackageOpen className="mb-2"/>
-              There are empty yet
-            </span>
-          </TableCell>
-        </TableRow>
-      )}
-      {invoices.length ? (
-        <TableFooter>
-          <TableRow>
-            <TableCell colSpan={3}>Total</TableCell>
-            <TableCell className="text-right">$2108.00</TableCell>
-          </TableRow>
-        </TableFooter>
-      ) : (
-        ""
-      )}
-    </Table>
+          </TableHead>
+          <TableBody>
+            {data.map((item) => (
+              <TableRow key={item.workspace}>
+                <TableCell>{item.workspace}</TableCell>
+                <TableCell>{item.owner}</TableCell>
+                <TableCell>
+                  <div
+                    className={cn(
+                      "inline-flex items-center gap-x-1 whitespace-nowrap rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset",
+                      item.type.toLowerCase() === "finance" &&
+                        "bg-blue-50 text-blue-900 ring-blue-500/30 dark:bg-blue-400/10 dark:text-blue-400 dark:ring-blue-400/30",
+                      item.type.toLowerCase() === "shopping" &&
+                        "bg-[#6cb3ee4f] text-[#6cb3ee] ring-[#6cb3ee]/40",
+                      item.type.toLowerCase() === "debt payments" &&
+                        "bg-[rgb(156,138,220)]/10 text-[rgb(156,138,220)] ring-[rgb(156,138,220)]/30",
+                    )}
+                  >
+                    {item.type}
+                  </div>
+                </TableCell>{" "}
+                <TableCell>{item.region}</TableCell>
+                <TableCell>{item.capacity}</TableCell>
+                <TableCell className="text-right">{item.costs}</TableCell>
+                <TableCell className="text-right">{item.lastEdited}</TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableRoot>
+    </div>
   );
 }

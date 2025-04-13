@@ -16,14 +16,14 @@ import {
   ChartLegendContent,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/components/ui/chart";
+} from "@/components/common/charts";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
+} from "@/components/ui/inputs/select";
 import { useState } from "react";
 const chartData = [
   { date: "2024-09-01", desktop: 222, mobile: 150 },

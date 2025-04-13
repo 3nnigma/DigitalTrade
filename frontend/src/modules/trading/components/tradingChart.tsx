@@ -1,10 +1,13 @@
 "use client";
 import { useTheme } from "next-themes";
 import React, { useEffect, useRef, memo } from "react";
+import { useCryptoStore } from "../store";
 
-function TradingViewWidget() {
-  const container = useRef();
+function TradingChart() {
+  const container = useRef<HTMLDivElement>(null);
   const { theme } = useTheme();
+  const symbol = useCryptoStore(state => state.symbol)
+  const symbolQuery = "BINANCE:" + symbol + "USDT"
   useEffect(() => {
     if (!container.current) return;
     container.current.innerHTML = "";
@@ -15,19 +18,20 @@ function TradingViewWidget() {
     script.async = true;
     script.textContent = JSON.stringify({
       autosize: false,
-      symbol: "NASDAQ:AAPL",
+      symbol: symbolQuery,
       interval: "D",
       timezone: "Etc/UTC",
       hide_side_toolbar: false,
       theme: theme === "dark" ? "dark" : "light",
       style: "3",
       locale: "en",
-      allow_symbol_change: true,
+      allow_symbol_change: false,
       calendar: false,
       support_host: "https://www.tradingview.com",
     });
     container.current.appendChild(script);
-  }, [theme]);
+
+  }, [theme, symbol]);
 
   return (
     <div
@@ -37,10 +41,10 @@ function TradingViewWidget() {
     >
       <div
         className="tradingview-widget-container__widget"
-        style={{ height: "calc(100% - 32px)", width: "100%" }}
+        style={{ height: "100%", width: "100%" }}
       ></div>
     </div>
   );
 }
 
-export default memo(TradingViewWidget);
+export default memo(TradingChart);

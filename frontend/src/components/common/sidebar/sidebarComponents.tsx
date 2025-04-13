@@ -16,7 +16,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdownMenu";
+} from "@/components/ui/inputs/dropdownMenu";
 import { LogoutComponent } from "@/modules/auth/logout";
 
 export function SidebarHeader() {

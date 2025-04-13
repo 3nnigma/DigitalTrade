@@ -2,7 +2,8 @@ import { MoreHorizontal } from "lucide-react";
 import CardBlock from "./components/CardBlock";
 import FastTransfer from "./components/FastTransfer";
 import MarketView from "./components/MarketView";
-import StatePanel from "./components/StatePanel";
+import StatePanel from "./components/statePanel/StatePanel";
+import CardPreview from "./card/CardPreview";
 
 export default function BankApplication() {
   return (

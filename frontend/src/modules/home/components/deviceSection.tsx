@@ -1,5 +1,4 @@
 import { BorderTrail } from "../ui/borderTrail";
-import Iphone from "../ui/devices/iphone";
 import { Mackbook } from "../ui/mackbook";
 
 const devicesIcon = [

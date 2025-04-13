@@ -13,15 +13,15 @@ export default function Sidebar() {
             <div key={index}>
               <Link
                 href={nItem.link}
-                className="hover:bg-hoverbg py-1 px-2 rounded transition-all my-1 flex  items-center"
+                className="hover:bg-hoverbg py-1.5 px-2 rounded transition-all my-1.5 flex  items-center"
               >
-                <div className="flex">
+                <div className="flex items-center">
                   {<nItem.icon size={18} />}
                   <span className="ml-3">{nItem.title} </span>
                 </div>
-                {nItem.isBeta && <span className="font-normal ml-5 bg-sky-500 rounded-t-full rounded-br-full p-1 h-[14px] w-11 flex justify-center items-center text-xs font-mono">Beta</span>}
+                {nItem.isBeta && <span className="font-normal ml-5 bg-sky-500 rounded-t-full rounded-br-full p-1 h-[14px] w-11 flex justify-center text-white items-center text-xs font-mono">Beta</span>}
               </Link>
-              <div className="flex flex-col border-l mb-5 border-gray-300 h-[90px] dark:border-gray-700 ml-4">
+              <div className="flex flex-col border-l mb-[26px] border-gray-300 h-[90px] dark:border-gray-700 ml-4">
                 {nItem.subItems.map((subItem, index) => (
                   <div key={index} className="flex items-center">
                     <span className="text-gray-300 dark:text-gray-600">⎯</span>

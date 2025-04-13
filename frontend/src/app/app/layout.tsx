@@ -2,7 +2,7 @@
 
 import AuthHeader from "@/components/common/header/authHeader";
 import Sidebar from "@/components/common/sidebar/sidebar";
-import Spinner from "@/components/ui/spinner";
+import Spinner from "@/components/ui/futures/spinner";
 import { useAuthStore } from "@/modules/auth/store";
 import { useUser } from "@/modules/auth/user";
 import { ReactNode } from "react";

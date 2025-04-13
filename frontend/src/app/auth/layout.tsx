@@ -57,7 +57,7 @@ export default function AuthLayout({
           <div className="pl-44 pb-10 font-sans">
             <ul className="relative flex flex-col md:flex-row gap-2">
               {steps.map((step, index) => (
-                <li className="md:shrink text-center md:basis-0 flex-1 group flex gap-x-2 md:block">
+                <li key={index} className="md:shrink text-center md:basis-0 flex-1 group flex gap-x-2 md:block">
                   <div className="min-w-7 min-h-7 flex flex-col items-center md:w-full md:inline-flex md:flex-wrap md:flex-row text-xs align-middle">
                     <span className="size-7 flex justify-center items-center shrink-0 bg-gray-100 font-medium text-gray-800 rounded-full dark:bg-neutral-700 dark:text-white">
                       {step.icon}

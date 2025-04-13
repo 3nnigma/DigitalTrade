@@ -1,4 +1,4 @@
-import { BottomGradient } from "@/components/ui/bottomGradient";
+import { BottomGradient } from "./ui/bottomGradient";
 import { FC } from "react";
 
 export const ButtonAuth: FC<{ formType: string }> = ({ formType }) => {

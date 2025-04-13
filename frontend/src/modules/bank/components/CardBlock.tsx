@@ -1,7 +1,13 @@
+"use client"
+
 import { HandCoins, Wallet, Coins, LayoutList } from "lucide-react";
-import Image from "next/image";
 import Shadow from "../ui/shadow";
 import Link from "next/link";
+import CardPreview from "../card/CardPreview";
+import { useEffect } from "react";
+import { useParams } from "next/navigation";
+import { useCardStore } from "../card/helpers/store";
+import { useFetchCard } from "../card/helpers/hooks";
 
 const payments = [
   {
@@ -27,6 +33,29 @@ const payments = [
 ];
 
 export default function CardBlock() {
+  const params = useParams();
+  const cardId = params.id as string;
+
+  const {
+    setEditing,
+    initializeCard,
+  } = useCardStore();
+
+  const {
+    data: card,
+    isLoading,
+    isError
+  } = useFetchCard(cardId);
+
+  useEffect(() => {
+    if (card) {
+      initializeCard(card);
+    } else if (!isLoading && !isError && cardId === "new") {
+      initializeCard(null);
+      setEditing(true);
+    }
+  }, [card, initializeCard, isLoading, isError, cardId, setEditing]);
+
   return (
     <div className="flex h-[320px] rounded-lg border  bg-section-gradient dark:bg-section-gradient-dark  border-[rgba(209,213,219,0.7)] dark:border-[rgba(255,255,255,0.10)]">
       <div className="flex pt-4  flex-col items-end w-[40%] h-full ">
@@ -36,15 +65,8 @@ export default function CardBlock() {
             Platinum Card
           </div>
         </div>
-        <div className="w-[400px] relative pt-6 h-[240px]">
-          <Image
-            src="/card.png"
-            alt="card"
-            width={360}
-            height={340}
-            className="rounded-2xl z-10 relative shadow-xl shadow-black/[0.1] dark:shadow-white/[0.05]  "
-          />
-          <div className="w-[360px] h-[220px] bg-blue-400/30 rounded-2xl border border-[#ffffff3d] border-dashed absolute right-[2%] top-[1%]"></div>
+        <div className="w-[430px] relative">
+        <CardPreview />
         </div>
       </div>
       <div className="w-[57%] ml-10 h-full  overflow-hidden px-20  flex justify-between relative ">
@@ -52,9 +74,11 @@ export default function CardBlock() {
           <div className="w-5/6">
             <div className="w-full flex justify-between  items-center">
               Personal Account{" "}
+              <Link href="bank/card/124">
               <button className="bg-gradient-to-br h-9 px-4 mt-5 text-sm rounded-lg from-[rgba(185,225,255,0.21)] font-semibold to-[#51b1f91c] text-white">
                 + Add Card
               </button>{" "}
+              </Link>
             </div>
             <span className="text-4xl flex">
               <p className="font-normal mr-0.5 text-3xl mb-1 pt-1">$</p>

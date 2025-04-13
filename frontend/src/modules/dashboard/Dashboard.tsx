@@ -1,4 +1,3 @@
-
 "use client";
 
 import {
@@ -9,13 +8,14 @@ import {
   TrendingUp,
 } from "lucide-react";
 import { Graphs } from "./ui/graphs";
-import { NumberTicker } from "@/components/ui/numberTicker";
-import { Button } from "@/components/ui/button";
+import { NumberTicker } from "@/components/ui/futures/numberTicker";
+import { Button } from "@/components/ui/buttons/button";
 import { ChartProto } from "@/app/chart";
 import Link from "next/link";
-import { BentoGridThirdDemo } from "@/modules/dashboard/ui/introduction";
+import { BentoGridThirdDemo } from "@/modules/dashboard/components/introduction";
 import { useAuthStore } from "@/modules/auth/store";
-import { TableDemo } from "@/modules/dashboard/components/table";
+import { BarCharts } from "@/components/common/barChart";
+import { TableExample } from "./components/table";
 
 const stats = [
   {
@@ -33,7 +33,7 @@ const stats = [
         Replenish
       </Button>
     ),
-    url: "/payment"
+    url: "/payment",
   },
   {
     title: "Total Expenses",
@@ -44,14 +44,14 @@ const stats = [
         Withdrawal
       </Button>
     ),
-    url: "/withdrawal"
+    url: "/withdrawal",
   },
 ];
 
 export default function Dashboard() {
-  const user = useAuthStore(state => state.user);
+  const user = useAuthStore((state) => state.user);
 
-  stats[0].amount = Number(user?.balance) || 0
+  stats[0].amount = Number(user?.balance) || 0;
   const income = stats[1].amount;
   const expenses = stats[2].amount;
   const currentBalance = stats[0].amount;
@@ -115,24 +115,16 @@ export default function Dashboard() {
                     )}
                   </div>
                 )}
-                <Link href={item?.url || '#'}>
-                  {item?.btn}
-                </Link>
+                <Link href={item?.url || "#"}>{item?.btn}</Link>
               </div>
               <Info size={18} className="absolute top-7 right-6" />
             </div>
           ))}
         </div>
-        <ChartProto />
-        <div className="px-4 justify-between w-full mt-4 flex ">
-          <div className="w-[47%] h-80">
-            <h2 className="mb-2 ml-2 text-lg">Cryptocurrencies and stocks</h2>
-          <TableDemo />
-          </div>
-          <div className="w-[47%] h-80">
-          <h2 className="mb-2 ml-2 text-lg">All transactions</h2>
-          <TableDemo />
-          </div>
+        {/* <ChartProto /> */}
+        <BarCharts />
+        <div className="px-4 w-full mt-4 flex ">
+          <TableExample />
         </div>
       </div>
       <div className="w-[23%]">

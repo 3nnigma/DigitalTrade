@@ -1,6 +1,6 @@
-import { Label } from "../components/label";
+import { Label } from "../components/ui/label";
 import { LabelInputContainer } from "../components/labelInputContainer";
-import { Input } from "../components/input";
+import { Input } from "../components/ui/input";
 export const InputContainers = ({ register }: any) => {
   return (
     <>

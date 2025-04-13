@@ -137,6 +137,10 @@
     }
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 html .bg-avt {
     background:
         linear-gradient(rgba(30, 30, 30, 0.5), rgba(30, 30, 30, 0.5))
@@ -157,15 +161,7 @@ html .bg-avt {
     clip-path: ellipse(20% 20% at 50% 0%);
 }
 
-.tradingview-widget-container,
-iframe {
-    /* background: red !important; */
-}
-.tv-embed-widget-wrapper__body {
-    border-radius: none !important;
-    border: none !important;
-    background: red;
-}
+
 
 .mask-gradient {
     background: linear-gradient(
@@ -174,4 +170,21 @@ iframe {
         transparent 27% 72%,
         hsl(var(--background)) 81%
     );
+}
+
+
+
+
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
 }

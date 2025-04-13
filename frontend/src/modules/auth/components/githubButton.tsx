@@ -1,11 +1,11 @@
 import { Github } from "lucide-react";
-import { BottomGradient } from "@/components/ui/bottomGradient";
 import { ContinueWithGithub } from "../OAuth/utils/ContinueSocialAuth";
+import { BottomGradient } from "./ui/bottomGradient";
 
 export const GithubButton = () => {
   return (
     <button
-      className="relative group/btn mr-2  flex space-x-2 items-center justify-center px-4 my-1 w-full text-black rounded-md h-10 font-medium shadow-input bg-gray-50 dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"
+      className="relative group/btn mr-2  flex space-x-2 items-center justify-center px-4 mb-1 w-full text-black rounded-md h-10 font-medium shadow-input bg-gray-50 dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"
       onClick={(e) => {
         ContinueWithGithub();
         e.preventDefault();

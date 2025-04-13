@@ -103,7 +103,7 @@ function PBlocks({
   return (
     <div
       className={`h-5 flex justify-between items-center p-1 px-2 border-[rgba(255,255,255,0.25)] mr-3 rounded-xl font-sans uppercase text-xs mt-1
-        ${type == "info" ? "text-neutral-400 bg-zinc-800 border" : "text-chart3 dark:bg-[hsla(221.2,83.2%,53.3%,0.19)]"}`}
+        ${type == "info" ? "text-neutral-700 dark:text-neutral-400 bg-gray-400 dark:bg-zinc-800 border" : "text-chart3 bg-[hsla(221.2,83.2%,53.3%,0.19)]"}`}
     >
       <span
         className={`w-1 mr-2 h-1 rounded-full

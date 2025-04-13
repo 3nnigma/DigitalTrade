@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5ff27a24-540e-4908-937a-7b58a823bf78" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/app/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/bun.lockb" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/bun.lockb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/public/logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/app/trading/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/app/trading/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/auth/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/auth/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/chart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/chart.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/payment/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/payment/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/payment/success/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/payment/success/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/test/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/Logo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/common/header/authHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/common/header/authHeader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/common/header/defaultHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/common/header/defaultHeader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/common/sidebar/sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/common/sidebar/sidebar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/common/sidebar/sidebarComponents.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/common/sidebar/sidebarComponents.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/common/sidebar/sidebarItems.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/common/sidebar/sidebarItems.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/ui/bentoGrid.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/ui/bottomGradient.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/ui/button.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/ui/buttonGradient.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/ui/chart.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/ui/checkBox.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/ui/collapsible.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/ui/dropdownMenu.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/ui/input.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/ui/numberTicker.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/ui/popover.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/ui/select.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/ui/skeleton.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/ui/spinner.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/ui/table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/ui/table.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/ui/themeToggle.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/ui/wordRotate.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/modules/auth/Activation/Activation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/modules/auth/Activation/Activation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/modules/auth/Login/InputContainers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/modules/auth/Login/InputContainers.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/modules/auth/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/modules/auth/Login/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/modules/auth/OAuth/GithubAuth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/modules/auth/OAuth/GithubAuth.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/modules/auth/OAuth/GoogleAuth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/modules/auth/OAuth/GoogleAuth.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/modules/auth/PasswordReset/PasswordReset.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/modules/auth/PasswordReset/PasswordReset.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/modules/auth/PasswordReset/PasswordResetConfirm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/modules/auth/PasswordReset/PasswordResetConfirm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/modules/auth/Registration/InputContainers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/modules/auth/Registration/InputContainers.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/modules/auth/components/buttonAuth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/modules/auth/components/buttonAuth.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/modules/auth/components/githubButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/modules/auth/components/githubButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/modules/auth/components/googleButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/modules/auth/components/googleButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/modules/auth/components/input.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/modules/auth/components/label.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/modules/bank/Bank.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/modules/bank/Bank.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/modules/bank/components/CardBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/modules/bank/components/CardBlock.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/modules/bank/components/CardProviders.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/modules/bank/components/StatePanel.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/modules/bank/components/TransferData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/modules/bank/components/TransferData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/modules/bank/ui/graphicsModel.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/modules/bank/ui/usaIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/modules/bank/ui/usaIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/modules/dashboard/Dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/modules/dashboard/Dashboard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/modules/dashboard/components/table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/modules/dashboard/components/table.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/modules/dashboard/ui/graphs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/modules/dashboard/ui/graphs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/modules/dashboard/ui/introduction.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/modules/home/components/animatedBeam.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/modules/home/components/animatedBeam.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/modules/home/components/deviceSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/modules/home/components/deviceSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/modules/home/components/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/modules/home/components/footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/modules/home/components/mainBackground.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/modules/home/components/mainBackground.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/modules/home/ui/cryptoMarquee.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/modules/home/ui/cryptoMarquee.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/modules/home/ui/devices/iphone.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/modules/home/ui/furutes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/modules/home/ui/furutes.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/modules/home/ui/introCards.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/modules/home/ui/introCards.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/modules/home/ui/mackbook.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/modules/home/ui/mackbook.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/modules/trading/TradingViewWidget.jsx" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2vcvqFJYUEArMpqsXPQRpIQ8kM0" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/3nigma/Projects/DigitalTrade/backend"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5ff27a24-540e-4908-937a-7b58a823bf78" name="Changes" comment="" />
+      <created>1744457365140</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1744457365140</updated>
+    </task>
+    <servers />
+  </component>
+</project>

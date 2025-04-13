@@ -3,14 +3,13 @@
 import { navItems } from "../sidebar/sidebarItems";
 import { usePathname, useRouter } from "next/navigation";
 import { ArrowLeftToLine, Bell, LogOut, Settings } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { axiosAuth } from "@/api/interceptors";
 import { API_URL } from "@/lib/config";
 import { useAuthStore } from "@/modules/auth/store";
 import { useMutation } from "@tanstack/react-query";
 import { useRouter as useNavRouter } from "next/navigation";
-import ThemeSwitcherButton from "@/components/ui/themeToggle";
+import ThemeSwitcherButton from "@/components/ui/futures/themeToggle";
 
 export default function AuthHeader() {
   const pathName = usePathname();

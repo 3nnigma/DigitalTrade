@@ -81,7 +81,7 @@ export default function Login() {
            initial={{ opacity: 0, width: "0%" }}
            animate={{ opacity: 1, width: "100%" }}
            transition={{ duration: 0.8, delay: 1.4 }}
-           className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent mt-4 mb-4 h-[1px] w-full"
+           className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent mt-4 mb-5 h-[1px] w-full"
          />
 
          <motion.div

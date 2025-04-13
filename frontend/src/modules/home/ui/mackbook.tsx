@@ -52,7 +52,7 @@ export function Mackbook({
                   width={32}
                   height={32}
                   alt="logo"
-                  className="rounded-lg bg-white text-white font-sans mr-3 w-[30px] h-[30px] px-1 pt-1 "
+                  className="rounded-lg bg-white text-white font-sans mr-3 w-[30px] h-[30px] px-1"
                 />
                 Launch DigitalTrade
               </div>

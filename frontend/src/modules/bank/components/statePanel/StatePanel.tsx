@@ -1,5 +1,5 @@
 import { MoreHorizontal, Calendar } from "lucide-react";
-import GraphicsModel from "../ui/graphicsModel";
+import GraphicsModel from "./graphicsModel";
 import CardProviders from "./CardProviders";
 
 const btnStyle = "w-1/3 h-full  opacity-60 cursor-pointer"
@@ -20,7 +20,7 @@ export default function StatePanel() {
           </div>
         </div>
         <div className="flex justify-center mt-6 mb-3 font-sans text-sm items-center">
-          <div className="w-2/3  flex justify-center items-center  bg-[rgba(55,55,59,0.86)] pb-[6px] px-1 h-10 rounded-full">
+          <div className="w-2/3  flex justify-center items-center bg-[#d8d8d8db] dark:bg-[rgba(55,55,59,0.86)] pb-[6px] px-1 h-10 rounded-full">
             <button className={btnStyle + " rounded-tl-full rounded-bl-full"}>
               Pie Chart
             </button>
@@ -28,7 +28,7 @@ export default function StatePanel() {
             <button
               className={
                 btnStyle +
-                " rounded-tr-full rounded-br-full rounded-tl-full rounded-bl-full bg-[rgba(70,73,79,0.9)] shadow shadow-gray-600 !opacity-100"
+                " rounded-tr-full rounded-br-full rounded-tl-full rounded-bl-full bg-[#e5e5e5e5] dark:bg-[rgba(70,73,79,0.9)] shadow shadow-gray-400 dark:shadow-gray-600 !opacity-100"
               }
             >
               AI Sphere

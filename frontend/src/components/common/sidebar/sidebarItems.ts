@@ -40,7 +40,7 @@ export const navItems: INavItem[] = [
   {
     title: "Dashboard",
     icon: LayoutDashboard,
-    link: "dashboard",
+    link: "/app/dashboard",
     subItems: [
       {
         title: "Balance",
@@ -59,7 +59,7 @@ export const navItems: INavItem[] = [
   {
     title: "Bank Application",
     icon: Landmark,
-    link: "bank",
+    link: "/app/bank",
     subItems: [
       {
         title: "Accounts",
@@ -78,7 +78,7 @@ export const navItems: INavItem[] = [
   {
     title: "Trading",
     icon: ChartCandlestick,
-    link: "trading",
+    link: "/app/trading",
     isBeta: true,
     subItems: [
       {

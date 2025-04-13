@@ -1,6 +1,6 @@
 "use client";
 
-import Spinner from "@/components/ui/spinner";
+import Spinner from "@/components/ui/futures/spinner";
 import { useEffect } from "react";
 import useActivation from "./helpers/useActivation";
 

@@ -2,9 +2,8 @@
 import { useState } from "react";
 import { axiosAuth } from "@/api/interceptors";
 import { API_URL } from "@/lib/config";
-import { Card } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Banknote, BookmarkX, CalendarDays, CircleX, ShieldCheck, X } from "lucide-react";
+import { Input } from "@/components/ui/inputs/input";
+import { Banknote, CalendarDays, CircleX, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 
 const prices = [

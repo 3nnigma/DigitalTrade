@@ -7,7 +7,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { AuroraBackground } from "../ui/auroraBgEffect";
 import GlowText from "../ui/gloxText";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/buttons/button";
 import CryptoMarquee from "../ui/cryptoMarquee";
 
 export default function MainBackground() {

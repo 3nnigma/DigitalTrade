@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/buttons/button";
 import { CircleHelp } from "lucide-react";
 
 export default function TransferData() {

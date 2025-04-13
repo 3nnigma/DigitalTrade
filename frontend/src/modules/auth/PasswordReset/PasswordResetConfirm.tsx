@@ -3,8 +3,8 @@
 import { useForm } from "react-hook-form";
 import { ButtonAuth } from "../components/buttonAuth";
 import { LabelInputContainer } from "../components/labelInputContainer";
-import { Input } from "../components/input";
-import { Label } from "../components/label";
+import { Input } from "../components/ui/input";
+import { Label } from "../components/ui/label";
 import { usePasswordResetConfirm } from "./helpers/usePasswordReset";
 import Logo from "@/components/Logo";
 import { motion } from "framer-motion";

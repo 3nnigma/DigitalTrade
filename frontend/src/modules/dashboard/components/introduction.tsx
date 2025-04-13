@@ -1,8 +1,9 @@
-import { BentoGrid, BentoGridItem } from "@/components/ui/bentoGrid";
+import { BentoGrid, BentoGridItem } from "../ui/bentoGrid";
 import { AlignLeft, Landmark } from "lucide-react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/buttons/button";
+import Link from "next/link";
 
 export function BentoGridThirdDemo() {
   return (
@@ -28,7 +29,7 @@ export function BentoGridThirdDemo() {
         <p className="text-sm opacity-80 font-normal">
           Make transfers and payments more convenient
         </p>
-        <Button variant="outline" className="ml-5">Get started</Button>
+        <Link href="/app/bank"><Button variant="outline" className="ml-5">Get started</Button></Link>
         </div>
       </div>
     </BentoGrid>

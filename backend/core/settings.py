@@ -36,10 +36,10 @@ INSTALLED_APPS = [
     'djoser',
     'social_django',
     'corsheaders',
-    'app',
-    'users',
-    'trading',
-    'bank',
+    'app.apps.AppConfig',
+    'users.apps.UsersConfig',
+    'trading.apps.TradingConfig',
+    'bank.apps.BankConfig',
 ]
 
 MIDDLEWARE = [
@@ -73,7 +73,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'core.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
@@ -101,7 +100,6 @@ EMAIL_HOST_USER = getenv('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = getenv('EMAIL_HOST_PASSWORD')
 DEFAULT_FROM_EMAIL = getenv('DEFAULT_FROM_EMAIL')
 
-
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
@@ -120,7 +118,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 AUTH_COOKIE = 'access'
 AUTH_COOKIE_MAX_AGE = 60 * 60
 AUTH_COOKIE_SECURE = getenv('AUTH_COOKIE_SECURE', 'True') == 'True'
@@ -129,7 +126,6 @@ AUTH_COOKIE_HTTP_ONLY = False
 AUTH_COOKIE_SAMESITE = 'Lax'
 
 REFRESH_COOKIE_MAX_AGE = 60 * 60 * 24 * 7
-
 
 # Social Auth settings
 
@@ -176,7 +172,6 @@ REST_FRAMEWORK = {
     ]
 }
 
-
 # Djoser configuration
 
 DJOSER = {
@@ -186,7 +181,8 @@ DJOSER = {
     'USER_CREATE_PASSWORD_RETYPE': True,
     'PASSWORD_RESET_CONFIRM_RETYPE': True,
     'TOKEN_MODEL': None,
-    'SOCIAL_AUTH_ALLOWED_REDIRECT_URIS': getenv('REDIRECT_URLS').split(','),
+    'SOCIAL_AUTH_ALLOWED_REDIRECT_URIS': getenv('REDIRECT_URLS',
+                                                'http://localhost:3000/auth/github,http://localhost:3000/auth/google').split(','),
     'SERIALIZERS': {
         'user': 'users.serializers.UserAccountSerializer',
     }
@@ -202,7 +198,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/

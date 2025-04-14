@@ -24,36 +24,37 @@ DigitalTrade is a comprehensive 3-in-1 web application that integrates trading, 
 - **Frontend:**
   - Next.js
   - Tailwind CSS
-  - shadcn/ui
+  - ShadcnUI
   - Zustand (state management)
   - TanStack Query (data fetching)
+  - React Hook Form
   - Framer Motion (animations)
 - **Backend:**
-  - Django REST Framework
+  - Django (Django REST Framework)
   - PostgreSQL
   - Docker & Docker Compose
 
 ## Presentation
 
 ### Dashboard
-![Dashboard](https://github.com/3nnigma/DigitalTrade/blob/main/dashboard.png)
+![Dashboard](https://github.com/3nnigma/DigitalTrade/blob/main/presentation/dashboard.png)
 The Dashboard provides an at-a-glance overview of your portfolio performance, market trends, and key metrics. Interactive charts and summary cards help users quickly assess their financial status.
 
 ### Banking Panel
-![Banking Panel](https://github.com/3nnigma/DigitalTrade/blob/main/bank.png)
+![Banking Panel](https://github.com/3nnigma/DigitalTrade/blob/main/presentation/bank.png)
 The Banking Panel enables users to manage accounts, initiate payments via Stripe, and review transaction history. Secure authentication and real-time updates ensure reliable financial operations.
 
 ### Trading Panel
-![Trading Panel](https://github.com/3nnigma/DigitalTrade/blob/main/trading.png)
+![Trading Panel](https://github.com/3nnigma/DigitalTrade/blob/main/presentation/trading.png)
 The Trading Panel integrates TradingView charts for technical analysis, supports order placement, and displays live market data. Users can customize indicators and track open positions seamlessly.
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js (v16+)
+- Node.js (v20+)
 - Docker & Docker Compose
-- Python (v3.9+)
+- Python (v3.12+)
 - PostgreSQL
 
 ### Installation
